@@ -7,8 +7,10 @@ const app = express();
 
 import router from "./routes/user-routes";
 import blogRouter from "./routes/blog-routes";
-
+import cors from "cors";
 app.use(json());
+
+app.use(cors());
 
 app.use("/api/user", router);
 
